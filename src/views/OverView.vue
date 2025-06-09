@@ -10,6 +10,10 @@ import CreatePackets from '@/components/CreatePackets.vue'
 import EffimatchExp1 from '@/components/effimatch-exp1.vue'
 import EffimatchExp2 from '@/components/effimatch-exp2.vue'
 import EffimatchExp3 from '@/components/effimatch-exp3.vue'
+import EffimatchExp4 from '@/components/effimatch-exp4.vue'
+import EffimatchExp5 from '@/components/effimatch-exp5.vue'
+import HdcExp4 from '@/components/hdc-exp4.vue'
+import HdcExp2 from '@/components/hdc-exp2.vue'
 import EffimatchExp6 from '@/components/effimatch-exp6.vue'
 import HdcExp1 from '@/components/hdc-exp1.vue'
 </script>
@@ -56,15 +60,17 @@ import HdcExp1 from '@/components/hdc-exp1.vue'
         <el-row :gutter="20" style="margin-bottom: 20px">
           <el-col :span="24">
             <div class="graph-center-two">
-              <QueueGraph />
+              <!--              <EffimatchExp4 />-->
+              <HdcExp2 />
             </div>
           </el-col>
         </el-row>
 
         <el-row :gutter="20">
           <el-col :span="24">
-            <div class="graph-center-two">
-              <DropGraph />
+            <div class="graph-center-three">
+              <!--              <EffimatchExp5 />-->
+              <HdcExp4 />
             </div>
           </el-col>
         </el-row>
@@ -167,6 +173,17 @@ import HdcExp1 from '@/components/hdc-exp1.vue'
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.graph-center-three {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ebeef5;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  /* /* display: flex; */ */
   justify-content: center;
   align-items: center;
 }

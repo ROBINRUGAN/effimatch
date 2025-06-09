@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 15px 0; font-size: 18px; font-weight: bold">查询吞吐量</div>
+  <div style="margin: 15px 0; font-size: 18px; font-weight: bold">规则访问效率</div>
   <div
     ref="chartContainer"
     style="width: 100%; height: 250px"
@@ -23,10 +23,10 @@ const selectedSize = ref<string>(globalStore.ruleScale)
 let intervalId: number | null = null
 
 onMounted(() => {
-  globalStore.registerRefreshFunction('exp3', (size: string) => {
+  globalStore.registerRefreshFunction('exp5', (size: string) => {
     selectedSize.value = size
   })
-  globalStore.registerClearFunction('exp3', () => {
+  globalStore.registerClearFunction('exp5', () => {
     selectedSize.value = 'null'
   })
   if (chartContainer.value) {
@@ -52,46 +52,46 @@ watchEffect(() => {
 
 const originalData = {
   '1k': [
-    { category: 'acl1', EffiMatch: 13.5, NeuTree: 12.5, NuevoMatch: 0.5 },
-    { category: 'acl2', EffiMatch: 11.5, NeuTree: 9.5, NuevoMatch: 0.5 },
-    { category: 'acl3', EffiMatch: 12.0, NeuTree: 9.5, NuevoMatch: 0.5 },
-    { category: 'acl4', EffiMatch: 11.5, NeuTree: 9.5, NuevoMatch: 1.5 },
-    { category: 'acl5', EffiMatch: 10.0, NeuTree: 9.5, NuevoMatch: 1.0 },
-    { category: 'fw1', EffiMatch: 9.5, NeuTree: 8.0, NuevoMatch: 1.0 },
-    { category: 'fw2', EffiMatch: 14.0, NeuTree: 9.5, NuevoMatch: 1.5 },
-    { category: 'fw3', EffiMatch: 9.0, NeuTree: 8.0, NuevoMatch: 0.5 },
-    { category: 'fw4', EffiMatch: 9.0, NeuTree: 8.5, NuevoMatch: 1.5 },
-    { category: 'fw5', EffiMatch: 12.0, NeuTree: 9.5, NuevoMatch: 1.0 },
-    { category: 'ipc1', EffiMatch: 14.0, NeuTree: 12.5, NuevoMatch: 5.5 },
-    { category: 'ipc2', EffiMatch: 14.0, NeuTree: 10.5, NuevoMatch: 1.5 }
+    { category: 'acl1', EffiMatch: 1.3, NeuTree: 1.6, NuevoMatch: 1.3 },
+    { category: 'acl2', EffiMatch: 1.4, NeuTree: 1.8, NuevoMatch: 1.5 },
+    { category: 'acl3', EffiMatch: 1.6, NeuTree: 2.1, NuevoMatch: 1.7 },
+    { category: 'acl4', EffiMatch: 1.5, NeuTree: 2.0, NuevoMatch: 1.6 },
+    { category: 'acl5', EffiMatch: 1.4, NeuTree: 1.9, NuevoMatch: 1.6 },
+    { category: 'fw1',  EffiMatch: 1.3, NeuTree: 1.8, NuevoMatch: 1.3 },
+    { category: 'fw2',  EffiMatch: 1.1, NeuTree: 1.4, NuevoMatch: 1.1 },
+    { category: 'fw3',  EffiMatch: 1.2, NeuTree: 1.6, NuevoMatch: 1.2 },
+    { category: 'fw4',  EffiMatch: 1.7, NeuTree: 2.0, NuevoMatch: 1.6 },
+    { category: 'fw5',  EffiMatch: 1.5, NeuTree: 1.8, NuevoMatch: 1.5 },
+    { category: 'ipc1', EffiMatch: 1.3, NeuTree: 1.6, NuevoMatch: 1.3 },
+    { category: 'ipc2', EffiMatch: 1.1, NeuTree: 1.4, NuevoMatch: 1.2 }
   ],
   '10k': [
-    { category: 'acl1', EffiMatch: 10.0, NeuTree: 6.5, NuevoMatch: 0.5 },
-    { category: 'acl2', EffiMatch: 7.0, NeuTree: 5.0, NuevoMatch: 0.5 },
-    { category: 'acl3', EffiMatch: 8.0, NeuTree: 3.5, NuevoMatch: 0.5 },
-    { category: 'acl4', EffiMatch: 8.5, NeuTree: 5.0, NuevoMatch: 1.0 },
-    { category: 'acl5', EffiMatch: 10.0, NeuTree: 7.5, NuevoMatch: 1.0 },
-    { category: 'fw1', EffiMatch: 6.5, NeuTree: 5.5, NuevoMatch: 1.0 },
-    { category: 'fw2', EffiMatch: 13.0, NeuTree: 8.5, NuevoMatch: 1.5 },
-    { category: 'fw3', EffiMatch: 6.5, NeuTree: 6.0, NuevoMatch: 0.5 },
-    { category: 'fw4', EffiMatch: 4.5, NeuTree: 3.5, NuevoMatch: 1.0 },
-    { category: 'fw5', EffiMatch: 7.5, NeuTree: 7.0, NuevoMatch: 1.5 },
-    { category: 'ipc1', EffiMatch: 8.0, NeuTree: 7.5, NuevoMatch: 2.5 },
-    { category: 'ipc2', EffiMatch: 10.5, NeuTree: 9.0, NuevoMatch: 1.5 }
+    { category: 'acl1', EffiMatch: 1.5, NeuTree: 1.8, NuevoMatch: 1.4 },
+    { category: 'acl2', EffiMatch: 1.7, NeuTree: 2.1, NuevoMatch: 1.6 },
+    { category: 'acl3', EffiMatch: 2.0, NeuTree: 2.4, NuevoMatch: 1.9 },
+    { category: 'acl4', EffiMatch: 1.9, NeuTree: 2.2, NuevoMatch: 1.7 },
+    { category: 'acl5', EffiMatch: 1.7, NeuTree: 2.0, NuevoMatch: 1.6 },
+    { category: 'fw1',  EffiMatch: 1.5, NeuTree: 2.0, NuevoMatch: 1.4 },
+    { category: 'fw2',  EffiMatch: 1.3, NeuTree: 1.7, NuevoMatch: 1.2 },
+    { category: 'fw3',  EffiMatch: 1.5, NeuTree: 1.9, NuevoMatch: 1.3 },
+    { category: 'fw4',  EffiMatch: 2.1, NeuTree: 2.5, NuevoMatch: 2.0 },
+    { category: 'fw5',  EffiMatch: 1.9, NeuTree: 2.1, NuevoMatch: 1.7 },
+    { category: 'ipc1', EffiMatch: 1.8, NeuTree: 2.0, NuevoMatch: 1.6 },
+    { category: 'ipc2', EffiMatch: 1.5, NeuTree: 1.8, NuevoMatch: 1.4 }
   ],
   '100k': [
-    { category: 'acl1', EffiMatch: 7.0, NeuTree: 4.5, NuevoMatch: 0.5 },
-    { category: 'acl2', EffiMatch: 4.0, NeuTree: 3.0, NuevoMatch: 1.5 },
-    { category: 'acl3', EffiMatch: 5.0, NeuTree: 3.5, NuevoMatch: 1.5 },
-    { category: 'acl4', EffiMatch: 4.0, NeuTree: 3.5, NuevoMatch: 1.0 },
-    { category: 'acl5', EffiMatch: 6.0, NeuTree: 6.0, NuevoMatch: 0.5 },
-    { category: 'fw1', EffiMatch: 4.5, NeuTree: 4.0, NuevoMatch: 1.0 },
-    { category: 'fw2', EffiMatch: 10.0, NeuTree: 5.5, NuevoMatch: 1.5 },
-    { category: 'fw3', EffiMatch: 4.0, NeuTree: 4.0, NuevoMatch: 0.5 },
-    { category: 'fw4', EffiMatch: 3.0, NeuTree: 2.5, NuevoMatch: 1.5 },
-    { category: 'fw5', EffiMatch: 4.5, NeuTree: 4.5, NuevoMatch: 1.5 },
-    { category: 'ipc1', EffiMatch: 4.5, NeuTree: 4.5, NuevoMatch: 1.5 },
-    { category: 'ipc2', EffiMatch: 6.5, NeuTree: 6.5, NuevoMatch: 1.5 }
+    { category: 'acl1', EffiMatch: 1.7, NeuTree: 1.9, NuevoMatch: 1.6 },
+    { category: 'acl2', EffiMatch: 1.9, NeuTree: 2.2, NuevoMatch: 1.8 },
+    { category: 'acl3', EffiMatch: 2.1, NeuTree: 2.4, NuevoMatch: 2.0 },
+    { category: 'acl4', EffiMatch: 2.0, NeuTree: 2.2, NuevoMatch: 1.8 },
+    { category: 'acl5', EffiMatch: 1.9, NeuTree: 2.1, NuevoMatch: 1.7 },
+    { category: 'fw1',  EffiMatch: 1.7, NeuTree: 2.1, NuevoMatch: 1.6 },
+    { category: 'fw2',  EffiMatch: 1.5, NeuTree: 1.9, NuevoMatch: 1.4 },
+    { category: 'fw3',  EffiMatch: 1.6, NeuTree: 2.0, NuevoMatch: 1.5 },
+    { category: 'fw4',  EffiMatch: 2.2, NeuTree: 2.6, NuevoMatch: 2.1 },
+    { category: 'fw5',  EffiMatch: 2.0, NeuTree: 2.3, NuevoMatch: 1.9 },
+    { category: 'ipc1', EffiMatch: 2.0, NeuTree: 2.2, NuevoMatch: 1.8 },
+    { category: 'ipc2', EffiMatch: 1.8, NeuTree: 2.0, NuevoMatch: 1.6 }
   ]
 }
 
@@ -183,7 +183,7 @@ const chartOptions = computed(() => {
     xAxis: { type: 'category', data: categories },
     yAxis: {
       type: 'value',
-      name: 'Mpps',
+      name: 'Rule Acc. / Packet',
       nameLocation: 'middle',
       nameGap: 30
     },

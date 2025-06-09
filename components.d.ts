@@ -7,13 +7,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    copy: typeof import('./src/components/HistoryGraph copy.vue')['default']
     CreatePackets: typeof import('./src/components/CreatePackets.vue')['default']
     DropGraph: typeof import('./src/components/DropGraph.vue')['default']
     EatGraph: typeof import('./src/components/EatGraph.vue')['default']
     EffimatchExp1: typeof import('./src/components/effimatch-exp1.vue')['default']
     EffimatchExp2: typeof import('./src/components/effimatch-exp2.vue')['default']
     EffimatchExp3: typeof import('./src/components/effimatch-exp3.vue')['default']
+    EffimatchExp4: typeof import('./src/components/effimatch-exp4.vue')['default']
+    EffimatchExp5: typeof import('./src/components/effimatch-exp5.vue')['default']
     EffimatchExp6: typeof import('./src/components/effimatch-exp6.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -35,20 +36,17 @@ declare module 'vue' {
     ElRadioGroup: typeof import('element-plus/es')['ElRadioGroup']
     ElRow: typeof import('element-plus/es')['ElRow']
     ElSelect: typeof import('element-plus/es')['ElSelect']
-    Exp1: typeof import('./src/components/exp1.vue')['default']
     FlowGraph: typeof import('./src/components/FlowGraph.vue')['default']
     HdcExp1: typeof import('./src/components/hdc-exp1.vue')['default']
+    HdcExp2: typeof import('./src/components/hdc-exp2.vue')['default']
+    HdcExp4: typeof import('./src/components/hdc-exp4.vue')['default']
     HistoryGraph: typeof import('./src/components/HistoryGraph.vue')['default']
-    NewHistoryGraph: typeof import('./src/components/NewHistoryGraph.vue')['default']
-    NewTopoGraph: typeof import('./src/components/NewTopoGraph.vue')['default']
     QueueGraph: typeof import('./src/components/QueueGraph.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideBar: typeof import('./src/components/SideBar.vue')['default']
     SwitchCard: typeof import('./src/components/SwitchCard.vue')['default']
     SwitchList: typeof import('./src/components/SwitchList.vue')['default']
-    Topo: typeof import('./src/components/topo.vue')['default']
-    TopoDemo: typeof import('./src/components/TopoDemo.vue')['default']
     TopoGraph: typeof import('./src/components/TopoGraph.vue')['default']
   }
 }
