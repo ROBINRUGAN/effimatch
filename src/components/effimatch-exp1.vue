@@ -3,7 +3,7 @@
 
   <div
     ref="chartContainer"
-    style="width: 100%; height: 220px"
+    style="width: 100%; height: 320px"
     :style="{ opacity: globalStore.isStarted ? 1 : 0 }"
   ></div>
 </template>

@@ -25,11 +25,11 @@ watch(
     @close="handleClose"
     collapse="true"
   >
-    <el-menu-item index="/home" @click="router.push('/home')">
+    <el-menu-item index="/effimatch" @click="router.push('/effimatch')">
       <el-icon><Odometer /></el-icon>
       <span>仪表盘</span>
     </el-menu-item>
-    <el-menu-item index="/task" @click="router.push('/task')">
+    <el-menu-item index="/dhcview" @click="router.push('/dhcview')">
       <el-icon><document /></el-icon>
       <span>任务配置</span>
     </el-menu-item>

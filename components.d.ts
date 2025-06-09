@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    copy: typeof import('./src/components/hdc-exp2 copy.vue')['default']
     CreatePackets: typeof import('./src/components/CreatePackets.vue')['default']
     DropGraph: typeof import('./src/components/DropGraph.vue')['default']
     EatGraph: typeof import('./src/components/EatGraph.vue')['default']
@@ -39,6 +40,7 @@ declare module 'vue' {
     FlowGraph: typeof import('./src/components/FlowGraph.vue')['default']
     HdcExp1: typeof import('./src/components/hdc-exp1.vue')['default']
     HdcExp2: typeof import('./src/components/hdc-exp2.vue')['default']
+    HdcExp3: typeof import('./src/components/hdc-exp3.vue')['default']
     HdcExp4: typeof import('./src/components/hdc-exp4.vue')['default']
     HistoryGraph: typeof import('./src/components/HistoryGraph.vue')['default']
     QueueGraph: typeof import('./src/components/QueueGraph.vue')['default']

@@ -2,7 +2,7 @@
   <div style="margin: 15px 0; font-size: 18px; font-weight: bold">内存使用情况</div>
   <div
     ref="chartContainer"
-    style="width: 100%; height: 250px"
+    style="width: 100%; height: 300px"
     :style="{
       opacity: globalStore.isStarted ? 1 : 0
     }"
@@ -69,7 +69,7 @@ function startDataFluctuation() {
       const sizeKey = key as keyof typeof originalData
       liveData.value[sizeKey] = originalData[sizeKey].map((item) => {
         const newItem = { ...item } as { [key: string]: number | string }
-          // Updated the key to fluctuate to match new data structure
+        // Updated the key to fluctuate to match new data structure
         ;['withoutIndexSharing'].forEach((algo) => {
           const originalValue = item[algo as keyof typeof item] as number
           const multiplier = 0.9 + Math.random() * 0.2

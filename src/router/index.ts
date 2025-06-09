@@ -1,23 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import OverView from '../views/OverView.vue'
-import TaskView from '../views/TaskView.vue'
+import DHCView from '@/views/DHCView.vue'
+import EffimatchView from '@/views/EffimatchView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/home',
-      name: 'home',
-      component: OverView
+      path: '/effimatch',
+      name: 'effimatch',
+      component: EffimatchView
     },
     {
-      path: '/task',
-      name: 'task',
-      component: TaskView
+      path: '/dhcview',
+      name: 'dhcview',
+      component: DHCView
     },
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/effimatch'
     }
   ]
 })

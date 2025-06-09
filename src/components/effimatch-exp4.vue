@@ -2,7 +2,7 @@
   <div style="margin: 15px 0; font-size: 18px; font-weight: bold">预测结果的平均偏移</div>
   <div
     ref="chartContainer"
-    style="width: 100%; height: 250px"
+    style="width: 100%; height: 320px"
     :style="{
       opacity: globalStore.isStarted ? 1 : 0
     }"
@@ -57,11 +57,11 @@ const originalData = {
     { category: 'acl3', EffiMatch: 0.6, NeuTree: 1.0, NuevoMatch: 0.9 },
     { category: 'acl4', EffiMatch: 0.6, NeuTree: 1.1, NuevoMatch: 0.8 },
     { category: 'acl5', EffiMatch: 0.6, NeuTree: 1.1, NuevoMatch: 0.8 },
-    { category: 'fw1',  EffiMatch: 0.8, NeuTree: 1.0, NuevoMatch: 0.8 },
-    { category: 'fw2',  EffiMatch: 0.7, NeuTree: 0.9, NuevoMatch: 0.8 },
-    { category: 'fw3',  EffiMatch: 0.7, NeuTree: 1.0, NuevoMatch: 0.8 },
-    { category: 'fw4',  EffiMatch: 0.8, NeuTree: 1.0, NuevoMatch: 0.9 },
-    { category: 'fw5',  EffiMatch: 0.8, NeuTree: 0.9, NuevoMatch: 0.8 },
+    { category: 'fw1', EffiMatch: 0.8, NeuTree: 1.0, NuevoMatch: 0.8 },
+    { category: 'fw2', EffiMatch: 0.7, NeuTree: 0.9, NuevoMatch: 0.8 },
+    { category: 'fw3', EffiMatch: 0.7, NeuTree: 1.0, NuevoMatch: 0.8 },
+    { category: 'fw4', EffiMatch: 0.8, NeuTree: 1.0, NuevoMatch: 0.9 },
+    { category: 'fw5', EffiMatch: 0.8, NeuTree: 0.9, NuevoMatch: 0.8 },
     { category: 'ipc1', EffiMatch: 0.6, NeuTree: 0.9, NuevoMatch: 0.7 },
     { category: 'ipc2', EffiMatch: 0.6, NeuTree: 0.9, NuevoMatch: 0.7 }
   ],
@@ -71,11 +71,11 @@ const originalData = {
     { category: 'acl3', EffiMatch: 1.0, NeuTree: 1.2, NuevoMatch: 0.9 },
     { category: 'acl4', EffiMatch: 1.0, NeuTree: 1.3, NuevoMatch: 0.9 },
     { category: 'acl5', EffiMatch: 1.0, NeuTree: 1.2, NuevoMatch: 0.9 },
-    { category: 'fw1',  EffiMatch: 0.9, NeuTree: 1.2, NuevoMatch: 0.9 },
-    { category: 'fw2',  EffiMatch: 0.8, NeuTree: 1.0, NuevoMatch: 0.8 },
-    { category: 'fw3',  EffiMatch: 0.8, NeuTree: 1.0, NuevoMatch: 0.8 },
-    { category: 'fw4',  EffiMatch: 0.8, NeuTree: 1.1, NuevoMatch: 0.9 },
-    { category: 'fw5',  EffiMatch: 1.0, NeuTree: 1.1, NuevoMatch: 0.9 },
+    { category: 'fw1', EffiMatch: 0.9, NeuTree: 1.2, NuevoMatch: 0.9 },
+    { category: 'fw2', EffiMatch: 0.8, NeuTree: 1.0, NuevoMatch: 0.8 },
+    { category: 'fw3', EffiMatch: 0.8, NeuTree: 1.0, NuevoMatch: 0.8 },
+    { category: 'fw4', EffiMatch: 0.8, NeuTree: 1.1, NuevoMatch: 0.9 },
+    { category: 'fw5', EffiMatch: 1.0, NeuTree: 1.1, NuevoMatch: 0.9 },
     { category: 'ipc1', EffiMatch: 1.0, NeuTree: 1.2, NuevoMatch: 0.9 },
     { category: 'ipc2', EffiMatch: 1.0, NeuTree: 1.2, NuevoMatch: 0.8 }
   ],
@@ -85,11 +85,11 @@ const originalData = {
     { category: 'acl3', EffiMatch: 1.1, NeuTree: 1.2, NuevoMatch: 0.9 },
     { category: 'acl4', EffiMatch: 1.0, NeuTree: 1.2, NuevoMatch: 0.9 },
     { category: 'acl5', EffiMatch: 1.0, NeuTree: 1.3, NuevoMatch: 0.9 },
-    { category: 'fw1',  EffiMatch: 1.1, NeuTree: 1.3, NuevoMatch: 0.9 },
-    { category: 'fw2',  EffiMatch: 0.9, NeuTree: 1.1, NuevoMatch: 0.8 },
-    { category: 'fw3',  EffiMatch: 0.9, NeuTree: 1.2, NuevoMatch: 0.8 },
-    { category: 'fw4',  EffiMatch: 0.9, NeuTree: 1.2, NuevoMatch: 0.9 },
-    { category: 'fw5',  EffiMatch: 1.1, NeuTree: 1.3, NuevoMatch: 0.9 },
+    { category: 'fw1', EffiMatch: 1.1, NeuTree: 1.3, NuevoMatch: 0.9 },
+    { category: 'fw2', EffiMatch: 0.9, NeuTree: 1.1, NuevoMatch: 0.8 },
+    { category: 'fw3', EffiMatch: 0.9, NeuTree: 1.2, NuevoMatch: 0.8 },
+    { category: 'fw4', EffiMatch: 0.9, NeuTree: 1.2, NuevoMatch: 0.9 },
+    { category: 'fw5', EffiMatch: 1.1, NeuTree: 1.3, NuevoMatch: 0.9 },
     { category: 'ipc1', EffiMatch: 1.1, NeuTree: 1.4, NuevoMatch: 0.9 },
     { category: 'ipc2', EffiMatch: 1.0, NeuTree: 1.2, NuevoMatch: 0.8 }
   ]

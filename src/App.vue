@@ -5,7 +5,7 @@ import SideBar from '@/components/SideBar.vue'
 
 <template>
   <el-container>
-    <el-header>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</el-header>
+    <el-header>基于可编程数据平面的智能数据包分类与梯度聚合优化系统</el-header>
     <el-container>
       <el-aside width="fit-content">
         <SideBar />

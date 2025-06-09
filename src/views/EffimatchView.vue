@@ -30,17 +30,17 @@ import HdcExp1 from '@/components/hdc-exp1.vue'
           </el-col>
         </el-row>
 
-        <el-row :gutter="20">
+        <el-row :gutter="20" style="margin-bottom: 20px">
           <el-col :span="24">
-            <div class="graph-left-two">
-              <EffimatchExp1 />
+            <div class="graph-left-one">
+              <EffimatchExp3 />
             </div>
           </el-col>
         </el-row>
 
         <el-row :gutter="20">
           <el-col :span="24">
-            <div class="graph-left-three">
+            <div class="graph-left-one">
               <EffimatchExp2 />
             </div>
           </el-col>
@@ -51,26 +51,18 @@ import HdcExp1 from '@/components/hdc-exp1.vue'
       <div class="three-column" style="display: flex; flex-direction: column">
         <el-row :gutter="20" style="margin-bottom: 20px">
           <el-col :span="24">
-            <div class="graph-center-one">
-              <EffimatchExp3 />
-            </div>
-          </el-col>
-        </el-row>
-
-        <el-row :gutter="20" style="margin-bottom: 20px">
-          <el-col :span="24">
-            <div class="graph-center-two">
+            <div class="graph-left-one">
               <!--              <EffimatchExp4 />-->
-              <HdcExp2 />
+              <EffimatchExp4 />
             </div>
           </el-col>
         </el-row>
 
         <el-row :gutter="20">
           <el-col :span="24">
-            <div class="graph-center-three">
+            <div class="graph-left-one" style="margin-bottom: 20px">
               <!--              <EffimatchExp5 />-->
-              <HdcExp4 />
+              <EffimatchExp1 />
             </div>
           </el-col>
         </el-row>
@@ -80,24 +72,16 @@ import HdcExp1 from '@/components/hdc-exp1.vue'
       ><div class="three-column">
         <el-row :gutter="20" style="margin-bottom: 20px">
           <el-col :span="24">
-            <div class="graph-center-one">
+            <div class="graph-left-one">
               <EffimatchExp6 />
             </div>
           </el-col>
         </el-row>
 
-        <el-row :gutter="20" style="margin-bottom: 20px">
+        <el-row :gutter="20">
           <el-col :span="24">
-            <div class="graph-center-two">
-              <HdcExp1 />
-            </div>
-          </el-col>
-        </el-row>
-
-        <el-row :gutter="20" style="margin-bottom: 20px">
-          <el-col :span="24">
-            <div class="graph-center-two">
-              <EffimatchExp3 />
+            <div class="graph-left-two">
+              <EffimatchExp5 />
             </div>
           </el-col>
         </el-row></div
@@ -183,7 +167,6 @@ import HdcExp1 from '@/components/hdc-exp1.vue'
   border: 1px solid #ebeef5;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  /* /* display: flex; */ */
   justify-content: center;
   align-items: center;
 }

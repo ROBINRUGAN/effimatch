@@ -1,19 +1,26 @@
 <template>
-  <div style="margin: 15px 0; font-size: 18px; font-weight: bold">恢复率分析 (实时模拟)</div>
+  <div style="margin: 15px 0; font-size: 18px; font-weight: bold">恢复率分析</div>
 
-  <div ref="chartContainer" style="width: 100%; height: 220px"></div>
+  <div
+    ref="chartContainer"
+    :style="{
+      opacity: globalStore.isStarted ? 1 : 0
+    }"
+    style="width: 100%; height: 320px"
+  ></div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted, watch, watchEffect } from 'vue'
 import * as echarts from 'echarts'
+import { useGlobalStore } from '@/stores/global'
 
 // --- 1. 响应式状态定义 ---
 
 const chartContainer = ref<HTMLElement | null>(null)
 let myChart: echarts.ECharts | null = null
 let intervalId: number | null = null
-
+const globalStore = useGlobalStore()
 const originalData = ref<[number, number][]>([
   [0, 0],
   [0.05, 2.5],

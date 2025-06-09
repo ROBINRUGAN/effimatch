@@ -2,7 +2,7 @@
   <div style="margin: 15px 0; font-size: 18px; font-weight: bold">查询吞吐量</div>
   <div
     ref="chartContainer"
-    style="width: 100%; height: 250px"
+    style="width: 100%; height: 220px"
     :style="{
       opacity: globalStore.isStarted ? 1 : 0
     }"
