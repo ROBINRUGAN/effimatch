@@ -10,6 +10,8 @@ import CreatePackets from '@/components/CreatePackets.vue'
 import EffimatchExp1 from '@/components/effimatch-exp1.vue'
 import EffimatchExp2 from '@/components/effimatch-exp2.vue'
 import EffimatchExp3 from '@/components/effimatch-exp3.vue'
+import EffimatchExp6 from '@/components/effimatch-exp6.vue'
+import HdcExp1 from '@/components/hdc-exp1.vue'
 </script>
 
 <template>
@@ -70,9 +72,27 @@ import EffimatchExp3 from '@/components/effimatch-exp3.vue'
     </el-col>
     <el-col :span="8"
       ><div class="three-column">
-        <el-row :gutter="20">
+        <el-row :gutter="20" style="margin-bottom: 20px">
           <el-col :span="24">
-            <SwitchList />
+            <div class="graph-center-one">
+              <EffimatchExp6 />
+            </div>
+          </el-col>
+        </el-row>
+
+        <el-row :gutter="20" style="margin-bottom: 20px">
+          <el-col :span="24">
+            <div class="graph-center-two">
+              <HdcExp1 />
+            </div>
+          </el-col>
+        </el-row>
+
+        <el-row :gutter="20" style="margin-bottom: 20px">
+          <el-col :span="24">
+            <div class="graph-center-two">
+              <EffimatchExp3 />
+            </div>
           </el-col>
         </el-row></div
     ></el-col>
@@ -146,7 +166,7 @@ import EffimatchExp3 from '@/components/effimatch-exp3.vue'
   border: 1px solid #ebeef5;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
