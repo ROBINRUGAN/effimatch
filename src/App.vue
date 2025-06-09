@@ -20,6 +20,7 @@ import SideBar from '@/components/SideBar.vue'
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
 }
 </style>
 <style scoped>
