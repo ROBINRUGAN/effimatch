@@ -12,6 +12,8 @@ import EffimatchExp2 from '@/components/effimatch-exp2.vue'
 import EffimatchExp3 from '@/components/effimatch-exp3.vue'
 import EffimatchExp4 from '@/components/effimatch-exp4.vue'
 import EffimatchExp5 from '@/components/effimatch-exp5.vue'
+import HdcExp4 from '@/components/hdc-exp4.vue'
+import HdcExp2 from '@/components/hdc-exp2.vue'
 </script>
 
 <template>
@@ -56,7 +58,8 @@ import EffimatchExp5 from '@/components/effimatch-exp5.vue'
         <el-row :gutter="20" style="margin-bottom: 20px">
           <el-col :span="24">
             <div class="graph-center-two">
-              <EffimatchExp4 />
+<!--              <EffimatchExp4 />-->
+              <HdcExp2 />
             </div>
           </el-col>
         </el-row>
@@ -64,7 +67,8 @@ import EffimatchExp5 from '@/components/effimatch-exp5.vue'
         <el-row :gutter="20">
           <el-col :span="24">
             <div class="graph-center-three">
-              <EffimatchExp5 />
+<!--              <EffimatchExp5 />-->
+              <HdcExp4 />
             </div>
           </el-col>
         </el-row>

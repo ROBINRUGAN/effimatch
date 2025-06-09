@@ -36,6 +36,8 @@ declare module 'vue' {
     ElRow: typeof import('element-plus/es')['ElRow']
     ElSelect: typeof import('element-plus/es')['ElSelect']
     FlowGraph: typeof import('./src/components/FlowGraph.vue')['default']
+    HdcExp2: typeof import('./src/components/hdc-exp2.vue')['default']
+    HdcExp4: typeof import('./src/components/hdc-exp4.vue')['default']
     HistoryGraph: typeof import('./src/components/HistoryGraph.vue')['default']
     QueueGraph: typeof import('./src/components/QueueGraph.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
